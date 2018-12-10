@@ -20,7 +20,7 @@ import java.io.InputStream;
 @Excludes({com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule.class})
 public class UsherAppGlideModule extends AppGlideModule {
 
-    public static final String FOLDER_NAME = "glide";
+    public static final String FOLDER_NAME = "glide_encryption";
     private static final int DISK_CACHE_SIZE = 1024 * 1024 * 250;//250 Megabytes
 
     @Override
