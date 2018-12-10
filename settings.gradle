@@ -1,3 +1,7 @@
 //include ':app'
-include ':okhttp3'
-
+if(apply_aar == 'true'){
+    include ':okhttp3'
+}else{
+    include ':okhttp3_lib'
+    include ':okhttp3'
+}
