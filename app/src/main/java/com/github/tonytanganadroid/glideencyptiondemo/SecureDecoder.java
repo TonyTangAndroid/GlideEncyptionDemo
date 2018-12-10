@@ -2,6 +2,7 @@ package com.github.tonytanganadroid.glideencyptiondemo;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.annotation.NonNull;
 import android.util.Base64;
 
 import com.bumptech.glide.load.Options;
@@ -45,13 +46,13 @@ public class SecureDecoder implements ResourceDecoder<File, Bitmap> {
     }
 
 
-    public boolean handles(File source, Options options) throws IOException {
+    public boolean handles(@NonNull File source, @NonNull Options options) throws IOException {
         String base64EncryptedData = getStringFromStream(new FileInputStream(source));
         String decryptedData = encryptionRepository.decrypt(base64EncryptedData);
         return !decryptedData.equals(base64EncryptedData);
     }
 
-    public Resource<Bitmap> decode(File source, int width, int height, Options options) throws IOException {
+    public Resource<Bitmap> decode(@NonNull File source, int width, int height, @NonNull Options options) throws IOException {
         String base64EncryptedData = getStringFromStream(new FileInputStream(source));
         String decryptedData = encryptionRepository.decrypt(base64EncryptedData);
         byte[] encodeByte = Base64.decode(decryptedData, Base64.NO_WRAP);

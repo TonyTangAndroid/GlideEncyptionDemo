@@ -1,5 +1,7 @@
 package com.github.tonytanganadroid.glideencyptiondemo;
 
+import android.support.annotation.NonNull;
+
 import com.bumptech.glide.load.Options;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.load.model.ModelCache;
@@ -18,7 +20,7 @@ public class UsherImageModelLoader extends BaseGlideUrlLoader<String> {
     }
 
     @Override
-    public boolean handles(String imageUrl) {
+    public boolean handles(@NonNull String imageUrl) {
         return true;
     }
 
@@ -30,8 +32,9 @@ public class UsherImageModelLoader extends BaseGlideUrlLoader<String> {
     public static class Factory implements ModelLoaderFactory<String, InputStream> {
         private final ModelCache<String, GlideUrl> modelCache = new ModelCache<>(500);
 
+        @NonNull
         @Override
-        public ModelLoader<String, InputStream> build(MultiModelLoaderFactory multiFactory) {
+        public ModelLoader<String, InputStream> build(@NonNull MultiModelLoaderFactory multiFactory) {
             return new UsherImageModelLoader(multiFactory.build(GlideUrl.class, InputStream.class),
                     modelCache);
         }

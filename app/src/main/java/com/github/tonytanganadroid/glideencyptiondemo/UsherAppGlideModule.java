@@ -3,6 +3,7 @@ package com.github.tonytanganadroid.glideencyptiondemo;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
@@ -23,13 +24,13 @@ public class UsherAppGlideModule extends AppGlideModule {
     private static final int DISK_CACHE_SIZE = 1024 * 1024 * 250;//250 Megabytes
 
     @Override
-    public void applyOptions(Context context, GlideBuilder builder) {
+    public void applyOptions(@NonNull Context context, @NonNull GlideBuilder builder) {
         File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         builder.setDiskCache(new DiskLruCacheFactory(directory.getAbsolutePath(), FOLDER_NAME, DISK_CACHE_SIZE));
 
     }
 
-    public void registerComponents(Context context, Glide glide, Registry registry) {
+    public void registerComponents(@NonNull Context context, @NonNull Glide glide, @NonNull Registry registry) {
         registry.append(String.class, InputStream.class, new UsherImageModelLoader.Factory());
         EncryptionFacebookConcealRepository encryptionRepository = new EncryptionFacebookConcealRepository(context);
         registry.prepend(InputStream.class, new SecureEncoder(encryptionRepository));

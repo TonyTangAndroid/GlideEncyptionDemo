@@ -1,5 +1,6 @@
 package com.github.tonytanganadroid.glideencyptiondemo;
 
+import android.support.annotation.NonNull;
 import android.util.Base64;
 
 import com.bumptech.glide.load.Encoder;
@@ -22,7 +23,7 @@ public class SecureEncoder implements Encoder<InputStream> {
         this.encryptionRepository = encryptionRepository;
     }
 
-    public boolean encode(InputStream data, File file, Options options) {
+    public boolean encode(@NonNull InputStream data, @NonNull File file, @NonNull Options options) {
         try {
 
             String anyText = base64Data(data);
