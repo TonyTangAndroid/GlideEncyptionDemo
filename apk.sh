@@ -4,5 +4,6 @@ cp apk.sample settings.gradle
 gradle clean
 cd okhttp3
 gradle installDebug
-adb shell am start -n com.github.tonytanganadroid.glide.okhttp3.demo/.MainActivity
+adb shell am start -n lord.stark/stark.MainActivity
+cd ..
 mv settings.gradle.bk settings.gradle
