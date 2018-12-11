@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
+import com.bumptech.glide.signature.ObjectKey;
 
 import lord.stark.R;
 
@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageView ivDareDevil = findViewById(R.id.iv_daredevil);
-        Glide.with(this).load(TEST_IMAGE_URL).into(ivDareDevil);
+        GlideApp.with(this)
+                .load(TEST_IMAGE_URL)
+                .signature(new ObjectKey(System.currentTimeMillis()))//do not use cache
+                .into(ivDareDevil);
     }
 }
