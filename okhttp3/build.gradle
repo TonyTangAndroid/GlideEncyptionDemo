@@ -6,7 +6,6 @@ android {
     defaultConfig {
         applicationId "lord.stark"
         minSdkVersion 21
-        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -19,10 +18,10 @@ android {
     }
 
     buildTypes {
-
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources true
+            proguardFiles 'proguard_optimized_rules_from_google'
         }
     }
 }

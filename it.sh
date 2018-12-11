@@ -16,4 +16,4 @@ if [ "$badgeSDKNumOfFiles" -lt 2 ]; then
     echo "Bad result $badgeSDKNumOfFiles" >&2
     exit 1
 fi
-echo "success"
+echo "success sdk"
