@@ -4,3 +4,6 @@
   **[] $VALUES;
   public *;
 }
+-keep public class * {
+    public *;
+}
