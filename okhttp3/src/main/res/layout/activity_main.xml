@@ -4,5 +4,4 @@
            android:id="@+id/iv_daredevil"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           tools:context="com.github.tonytanganadroid.glide.okhttp3.demo.MainActivity"
            tools:ignore="ContentDescription"/>

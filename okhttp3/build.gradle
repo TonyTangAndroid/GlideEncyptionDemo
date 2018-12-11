@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {
-        applicationId "com.github.tonytanganadroid.glide.okhttp3.demo"
+        applicationId "lord.stark"
         minSdkVersion 21
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
@@ -20,9 +20,13 @@ android {
 }
 
 dependencies {
-//    api(name: '../../aars/glide', ext: 'aar')
-    implementation project(':okhttp3_lib')
+    api(name: '../../aars/glide', ext: 'aar')
+//    implementation project(':okhttp3_lib')
+
+
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
     implementation 'com.android.support:design:28.0.0'
+    implementation 'com.readystatesoftware.chuck:library:1.1.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
 }

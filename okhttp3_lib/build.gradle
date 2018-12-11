@@ -18,7 +18,7 @@ android {
 }
 
 dependencies {
-    api 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
     implementation 'com.readystatesoftware.chuck:library:1.1.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }

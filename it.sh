@@ -12,7 +12,7 @@ cp settings.gradle.bk settings.gradle
 cd temp/classes/tony
 badgeSDKNumOfFiles=$(count_files ./)
 echo "dir:$(pwd)"
-if [ "$badgeSDKNumOfFiles" -lt 3 ]; then
+if [ "$badgeSDKNumOfFiles" -lt 2 ]; then
     echo "Bad result $badgeSDKNumOfFiles" >&2
     exit 1
 fi

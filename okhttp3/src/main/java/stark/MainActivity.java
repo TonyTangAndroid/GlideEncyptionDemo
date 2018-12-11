@@ -1,10 +1,12 @@
-package com.github.tonytanganadroid.glide.okhttp3.demo;
+package stark;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+
+import lord.stark.R;
 
 public class MainActivity extends AppCompatActivity {
 
