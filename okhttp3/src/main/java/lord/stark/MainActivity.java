@@ -1,12 +1,10 @@
-package stark;
+package lord.stark;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.signature.ObjectKey;
-
-import lord.stark.R;
 
 public class MainActivity extends AppCompatActivity {
 

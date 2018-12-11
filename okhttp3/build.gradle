@@ -12,9 +12,16 @@ android {
         versionName "1.0"
         resConfigs "en"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
+
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -24,10 +31,13 @@ dependencies {
     api(name: '../../aars/glide', ext: 'aar')
 //    implementation project(':okhttp3_lib')
 
-
-    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.readystatesoftware.chuck:library:1.1.0'
+    api('com.github.UsherAndroid.external:all:1.3.17') {
+        exclude group: 'com.github.UsherAndroid.chuck', module: 'library'
+    }
+    api 'com.github.bumptech.glide:okhttp3-integration:4.8.0'
+    //noinspection GradleCompatible
+    api 'com.android.support:design:28.0.0'
+    api 'com.readystatesoftware.chuck:library:1.1.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 
 }
