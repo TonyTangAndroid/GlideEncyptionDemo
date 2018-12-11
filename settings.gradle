@@ -1,2 +1,1 @@
-include ':okhttp3_lib'
 include ':okhttp3'
