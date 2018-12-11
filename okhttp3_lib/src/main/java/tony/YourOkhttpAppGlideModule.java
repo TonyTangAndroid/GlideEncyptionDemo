@@ -1,4 +1,4 @@
-package com.github.tonytanganadroid.glide.okhttp3.lib;
+package tony;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
