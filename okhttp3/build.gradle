@@ -21,7 +21,7 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles 'proguard_optimized_rules_from_google'
+            proguardFiles 'proguard_optimized_rules_from_google.pro'
         }
     }
 }
