@@ -21,7 +21,7 @@ android {
 
 dependencies {
     if (apply_aar == 'true') {
-        api(name: '../../aars/fifth', ext: 'aar')
+        api(name: '../../aars/glide', ext: 'aar')
     } else {
         api project(':okhttp3_lib')
     }
