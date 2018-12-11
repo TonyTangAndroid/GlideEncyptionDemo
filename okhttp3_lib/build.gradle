@@ -3,7 +3,6 @@ android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {
-        consumerProguardFiles 'proguard-rules.pro'
         minSdkVersion 21
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 22
